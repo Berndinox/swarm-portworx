@@ -3,8 +3,18 @@ trying to migrate https://github.com/Berndinox/docker_webstack to compose_v3 and
 
 ### This Project is under dev
 
-#### Notices:
 
-01.02.2017
-- jwilder/nginx not ready for the swarm right now, switching to Traefik
-- Shared Storage under review. May use volume_driver swift.
+
+##### Prepare Host:
+`
+wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
+dpkg -i svfs_0.9.1_amd64.deb
+apt-get -f install -y
+dpkg -i svfs_0.9.1_amd64.deb
+rm /etc/apt/apt.conf.d/50unattended-upgrades.ucf-dist
+wget https://horizon.cloud.ovh.net/project/access_and_security/api_access/openrc/
+nano *-openrc.sh
+chmod +x mynumber-openrc.sh
+. mynumber-openrc.sh
+mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME docker /mnt
+`
