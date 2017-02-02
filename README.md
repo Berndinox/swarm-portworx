@@ -8,7 +8,7 @@ REQ:
 
 ### Prepare Host:
 
-##### Use OVH OpenStack Swift as Storage
+#### Use OVH OpenStack Swift as Storage
 OVH Storage is cheap and locate in EU, it also enables shared Volumes across the Swarm Cluster and is HA
 ```
 wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
@@ -22,7 +22,7 @@ chmod +x *-openrc.sh
 mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME docker /mnt
 ```
 
-##### Create the Swarm
+#### Create the Swarm
 ```
 docker swarm init
 docker swarm join-token manager
