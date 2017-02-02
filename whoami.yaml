@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: emilevauge/whoami
+    image: nginx:alpine
     networks:
       - proxy
     deploy:
@@ -10,7 +10,15 @@ services:
         - "traefik.docker.network=proxy"
         - "traefik.frontend.rule=Host:whoami.berndklaus.at"
       replicas: 3
+    volumes:
+      - nginx-html:/usr/share/nginx/html
 
 networks:
   proxy:
     external: true
+
+volumes:
+  nginx-html:
+    driver: local-persist
+    driver_opts:
+      mountpoint: /mnt/docker/
