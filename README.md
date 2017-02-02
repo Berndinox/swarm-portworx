@@ -10,6 +10,7 @@ REQ:
 
 #### Use OVH OpenStack Swift as Storage
 > https://www.ovh.de/cloud/storage/object-storage.xml
+
 OVH Storage is cheap and locate in EU, it also enables shared Volumes across the Swarm Cluster and is HA
 ```
 wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
