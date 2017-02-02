@@ -15,8 +15,7 @@ apt-get -f install -y
 dpkg -i svfs_0.9.1_amd64.deb
 rm /etc/apt/apt.conf.d/50unattended-upgrades.ucf-dist
 wget https://horizon.cloud.ovh.net/project/access_and_security/api_access/openrc/
-nano *-openrc.sh
-chmod +x mynumber-openrc.sh
-. mynumber-openrc.sh
+chmod +x *-openrc.sh
+. *-openrc.sh
 mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME docker /mnt
 ```
