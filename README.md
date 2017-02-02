@@ -11,7 +11,7 @@ REQ:
 #### Use OVH OpenStack Swift as Storage
 > https://www.ovh.de/cloud/storage/object-storage.xml
 
-OVH Storage is cheap and locate in EU, it also enables shared Volumes across the Swarm Cluster and is HA
+OVH Storage is cheap and located in EU (France, like Scaleway VMs), it also enables shared Volumes across the Swarm Cluster and is HA
 ```
 apt-get update && apt-get upgrade -y
 rm /etc/apt/apt.conf.d/50unattended-upgrades.ucf-dist
