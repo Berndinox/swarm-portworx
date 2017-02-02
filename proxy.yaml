@@ -1,0 +1,25 @@
+version: "3.0"
+
+services:
+  traefik:
+    image: traefik
+    networks:
+     - proxy
+    command: --web --docker.swarmmode --docker.domain=berndklaus.at --docker.watch --docker.endpoint=unix://var/run/docker.sock
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- ./traefik.toml:/etc/traefik/traefik.toml
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.role == manager
+
+
+networks:
+  proxy:
+    external: true

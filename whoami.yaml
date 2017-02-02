@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    image: emilevauge/whoami
+    networks:
+      - proxy
+    deploy:
+      labels:
+        - "traefik.port=80"
+        - "traefik.docker.network=proxy"
+        - "traefik.frontend.rule=Host:whoami.berndklaus.at"
+      replicas: 3
+
+networks:
+  proxy:
+    external: true
