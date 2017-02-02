@@ -1,13 +1,12 @@
-### swarm_webstack
 trying to migrate https://github.com/Berndinox/docker_webstack to compose_v3 and make ready for the swarm.
 
-### This Project is under dev
+#### ! This Project is under dev
 
 
 
 ### Prepare Host:
 
-###### Use OVH OpenStack Swift as Storage
+##### Use OVH OpenStack Swift as Storage
 OVH Storage is cheap and locate in EU, it also enables shared Volumes across the Swarm Cluster and is HA
 ```
 wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
