@@ -2,7 +2,9 @@ trying to migrate https://github.com/Berndinox/docker_webstack to compose_v3 and
 
 #### ! This Project is under dev
 
-
+REQ:
+- 3x Scaleway VM
+- OVH Public Cloud ObjectStore
 
 ### Prepare Host:
 
@@ -19,3 +21,10 @@ chmod +x *-openrc.sh
 . *-openrc.sh
 mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME docker /mnt
 ```
+
+##### Create the Swarm
+```
+docker swarm init
+docker swarm join-token manager
+```
+Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
