@@ -27,7 +27,6 @@ apt-get -f install fuse ruby -y
 wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
 dpkg -i svfs_0.9.1_amd64.deb
 wget https://horizon.cloud.ovh.net/project/access_and_security/api_access/openrc/
-chmod +x *-openrc.sh
 . *-openrc.sh
 mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME docker /mnt
 curl -fsSL https://raw.githubusercontent.com/CWSpear/local-persist/master/scripts/install.sh | sudo bash
