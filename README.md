@@ -23,9 +23,8 @@ In addition we do install the volume-driver plugin "local-persist", thanks to ht
 ```
 apt-get update && apt-get upgrade -y
 rm /etc/apt/apt.conf.d/50unattended-upgrades.ucf-dist
+apt-get -f install fuse ruby -y
 wget https://github.com/ovh/svfs/releases/download/v0.9.1/svfs_0.9.1_amd64.deb
-dpkg -i svfs_0.9.1_amd64.deb
-apt-get -f install -y
 dpkg -i svfs_0.9.1_amd64.deb
 wget https://horizon.cloud.ovh.net/project/access_and_security/api_access/openrc/
 chmod +x *-openrc.sh
