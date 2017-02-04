@@ -12,14 +12,20 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      #- ./traefik.toml:/etc/traefik/traefik.toml
+      #- traefik:/etc/traefik/:z
     deploy:
       mode: global
       placement:
         constraints:
           - node.role == manager
 
-
 networks:
   proxy:
     external: true
+
+#volumes:
+#  traefik:
+#    driver: local-persist
+#    driver_opts:
+#      mountpoint: /mnt/docker/traefik/
+
