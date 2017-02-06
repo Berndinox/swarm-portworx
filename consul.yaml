@@ -3,22 +3,12 @@ version: '3'
 
 services:
 
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    ports:
-      - "8500:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    deploy:
-      mode: global
-
   consul1:
     image: "progrium/consul:latest"
     hostname: "consul1"
     command: "-server -bootstrap-expect 3 -ui-dir /ui"
-    environment:
-     - VIRTUAL_HOST=127.0.0.1
-     - VIRTUAL_PORT=8500
+    ports:
+      - 8501:8500
 
   consul2:
     image: "progrium/consul:latest"
@@ -26,9 +16,8 @@ services:
     command: "-server -join consul1"
     depends_on:
       - consul1
-    environment:
-     - VIRTUAL_HOST=127.0.0.1
-     - VIRTUAL_PORT=8500
+    ports:
+      - 8502:8500
 
   consul3:
     image: "progrium/consul:latest"
@@ -36,7 +25,4 @@ services:
     command: "-server -join consul1"
     depends_on:
       - consul1
-    environment:
-     - VIRTUAL_HOST=127.0.0.1
-     - VIRTUAL_PORT=8500
 
