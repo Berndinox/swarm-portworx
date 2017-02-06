@@ -12,8 +12,9 @@ docker swarm join-token manager
 Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
 
 
-#### Setup Networks
+#### Setup
 ```
-docker network create --driver overlay proxy
-docker network create --driver overlay consul --attachable
+git clone https://github.com/Berndinox/swarm_webstack && cd swarm_webstack
+docker stack deploy --compose-file consul.yaml consul
+sh start_px.sh
 ```
