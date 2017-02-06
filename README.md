@@ -43,6 +43,7 @@ PS: PX-Dev Conatiner will take some time on the first startup
 
 ## Start using
 ```
-/opt/pwx/bin/pxctl status
+ln -s /opt/pwx/bin/pxctl /bin/pxctl
+pxctl status
 ```
 More: http://docs.portworx.com/create-manage-storage-volumes.html
