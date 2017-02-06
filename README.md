@@ -1,8 +1,7 @@
-> trying to migrate https://github.com/Berndinox/docker_webstack to compose_v3 and make ready for the swarm.
+This Project aims to provide an "straight-forward" way to create a swarm-cluster with Portworx (px-dev) as Volume-Driver for the Swarm.
+Portworx enables Cluster aware Volumes in an hyper-converged way.
 
-
-## ! This Project is under dev
-
+Advice: For DEV Env!
 
 #### Req:
 - 3 VMs (unformated disk on each VM) - Recommand: Scaleway VC1M
