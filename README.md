@@ -12,7 +12,8 @@ docker swarm join-token manager
 Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
 
 
-#### Setup Network for our Proxy
+#### Setup Networks
 ```
 docker network create --driver overlay proxy
+docker network create --driver overlay consul --attachable
 ```
