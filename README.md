@@ -6,6 +6,7 @@
 
 #### Req:
 - 3 VMs (unformated disk on each VM) - Recommand: Scaleway VC1M
+- Docker V1.13
 
 
 #### Create the Swarm
