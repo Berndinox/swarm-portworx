@@ -8,7 +8,8 @@ Advice: For DEV Env!
 - Docker V1.13
 
 
-#### Create the Swarm
+
+## Create the Swarm
 On the first Node:
 ```
 docker swarm init
@@ -17,7 +18,8 @@ docker swarm join-token manager
 Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
 
 
-#### Setup
+
+## Setup
 On the first Node:
 ```
 git clone https://github.com/Berndinox/swarm_webstack && cd swarm_webstack
@@ -36,3 +38,11 @@ sh start_px.sh
 ```
 
 PS: PX-Dev Conatiner will take some time on the first startup
+
+
+
+## Start using
+```
+/opt/pwx/bin/pxctl status
+```
+More: http://docs.portworx.com/create-manage-storage-volumes.html
