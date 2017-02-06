@@ -35,4 +35,4 @@ cp config.json /etc/pwx/
 sh start_px.sh
 ```
 
-PS: PX-Dev Conatiner will take some time
+PS: PX-Dev Conatiner will take some time on the first startup
