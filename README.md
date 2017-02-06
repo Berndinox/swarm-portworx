@@ -4,6 +4,10 @@
 ## ! This Project is under dev
 
 
+#### Req:
+- 3 VMs (unformated disk on each VM) - Recommand: Scaleway VC1M
+
+
 #### Create the Swarm
 ```
 docker swarm init
