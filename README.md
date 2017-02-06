@@ -31,7 +31,7 @@ sh start_px.sh
 
 On the 2 other nodes:
 ```
-git clone https://github.com/Berndinox/swarm_portworx && cd sswarm_portworx
+git clone https://github.com/Berndinox/swarm_portworx && cd swarm_portworx
 mkdir /etc/pwx
 cp config.json /etc/pwx/
 sh start_px.sh
