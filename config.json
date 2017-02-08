@@ -1,8 +1,7 @@
 {
   "clusterid": "swarm",
   "kvdb": [
-      "consul:http://127.0.0.1:8501",
-      "consul:http://127.0.0.1:8502"
+      "consul:http://127.0.0.1:8500"
      ],
   "storage": {
     "devices": [
