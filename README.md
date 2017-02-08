@@ -23,7 +23,7 @@ Execute the Output on the other nodes to join the Cluster.
 
 
 ## Setup
-
+on each node:
 ```
 git clone https://github.com/Berndinox/swarm_portworx && cd swarm_portworx
 sh start_px_init.sh
