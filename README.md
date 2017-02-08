@@ -3,9 +3,11 @@ Portworx enables Cluster aware Volumes in an hyper-converged way.
 
 Advice: For DEV Env!
 
+
 #### Req:
 - 3 VMs (unformated disk on each VM) - Recommand: Scaleway VC1M
 - Docker V1.13
+
 
 
 
@@ -19,15 +21,23 @@ Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
 
 
 
+
 ## Setup
+Node 1:
 ```
 git clone https://github.com/Berndinox/swarm_portworxk && cd swarm_portworx
 sh start_px.sh
+```
+Node 2-n:
+```
+git clone https://github.com/Berndinox/swarm_portworxk && cd swarm_portworx
+sh start_px_2.sh
 ```
 
 
 
 PS: PX-Dev Conatiner will take some time on the first startup
+
 
 
 
