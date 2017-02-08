@@ -17,7 +17,7 @@ On the first Node:
 docker swarm init
 docker swarm join-token manager
 ```
-Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
+Execute the Output on the other nodes to join the Cluster.
 
 
 
