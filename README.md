@@ -20,22 +20,12 @@ Execute the Output on the 2 other node to join the Cluster (3 Manager Nodes)
 
 
 ## Setup
-On the first Node:
 ```
 git clone https://github.com/Berndinox/swarm_portworxk && cd swarm_portworx
-docker stack deploy --compose-file consul.yaml consul
-mkdir /etc/pwx
-cp config.json /etc/pwx/
 sh start_px.sh
 ```
 
-On the 2 other nodes:
-```
-git clone https://github.com/Berndinox/swarm_portworx && cd swarm_portworx
-mkdir /etc/pwx
-cp config.json /etc/pwx/
-sh start_px.sh
-```
+
 
 PS: PX-Dev Conatiner will take some time on the first startup
 
