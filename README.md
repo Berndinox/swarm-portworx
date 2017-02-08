@@ -26,12 +26,12 @@ Execute the Output on the other nodes to join the Cluster.
 Node 1:
 ```
 git clone https://github.com/Berndinox/swarm_portworx && cd swarm_portworx
-sh start_px.sh
+sh start_px_init.sh
 ```
 Node 2-n:
 ```
 git clone https://github.com/Berndinox/swarm_portworx && cd swarm_portworx
-sh start_px_2.sh
+sh start_px.sh
 ```
 
 
