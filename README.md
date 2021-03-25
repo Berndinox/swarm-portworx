@@ -1,3 +1,8 @@
+### outdated
+### for testing only
+### no warranty
+---------------------------
+
 This Project aims to provide an "straight-forward" way to create a swarm-cluster with Portworx (px-dev) as Volume-Driver for the Swarm.
 Portworx enables Cluster aware Volumes in an hyper-converged way.
 
